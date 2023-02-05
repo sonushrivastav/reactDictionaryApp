@@ -3,13 +3,11 @@ import { React, useRef, useState } from "react";
 function App() {
   const searchRef = useRef()
   const [apivalue, setapiValue] = useState()
-  // let synonymsData = apivalue?.meanings[0]?.definitions[0]
   
   const data = (result, word) => {
     if (result?.title) {
       searchRef.current.innerHTML = `Can't find the meaning of <span>"${word}"</span>. Please, try to search for another word. `
     } else {
-      // console.log(result);
       result?.map((res) => {
         setapiValue(res)
       })
