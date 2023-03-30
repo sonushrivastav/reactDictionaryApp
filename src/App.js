@@ -6,7 +6,7 @@ function App() {
   
   const data = (result, word) => {
     if (result?.title) {
-      searchRef.current.innerHTML = `Can't find the meaning of <span>"${word}"</span>. Please, try to search for another word. `
+      searchRef.current.innerHTML = `Can't find the meanings of <span>"${word}"</span>. Please, try to search for another word. `
     } else {
       result?.map((res) => {
         setapiValue(res)
